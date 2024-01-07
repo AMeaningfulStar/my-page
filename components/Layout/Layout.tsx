@@ -1,4 +1,4 @@
-import NavBar from "@components/Layout/NavBar/NavBar"
+import Header from "./Header/Header"
 
 interface LayoutType {
   children: React.ReactNode
@@ -7,9 +7,9 @@ interface LayoutType {
 export default function Layout({ children }: LayoutType) {
   return (
     <>
-      <div className="w-full min-h-screen bg-white">
-        <NavBar />
-        <main className="">{children}</main>
+      <div className="relative w-full min-h-screen bg-white">
+        <Header />
+        {children}
       </div>
     </>
   )
